@@ -1,0 +1,665 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
+/* Fonts */
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Questrial",  sans-serif;
+    --nav-font: "Noto Sans",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #0a0f14; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #0f2943; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #e87532; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #0a0f14;  /* The default color of the main navmenu links */
+    --nav-hover-color: #e87532; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #0a0f14; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #e87532; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  
+  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  
+  .light-background {
+    --background-color: #faf9fb;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #060606;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #252525;
+    --contrast-color: #ffffff;
+  }
+  
+  /* Smooth scroll */
+  :root {
+    scroll-behavior: smooth;
+  }
+  
+/* Apply Times New Roman alternative to all text */
+body {
+    font-family: 'Noto Serif', 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+/* Navbar Default */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+}
+
+/* Scrolled Navbar */
+.navbar.scrolled {
+    background-color: #34495e !important; /* Dark background */
+}
+
+.navbar.scrolled .nav-link {
+    color: white !important;
+}
+
+/* Navbar Links */
+.navbar {
+    transition: color 0.3s ease;
+}
+
+.nav-link {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link.active {
+  color: var(--bs-primary) !important; /* or use your custom color like #ff6600 */
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: black;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 60px 0;
+    text-align: left;
+    
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+}
+
+.hero p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: Times New Roman;
+}
+
+.cta-buttons .btn {
+    margin-right: 10px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* General Hero Heading Styling */
+.hero-heading {
+    font-family: 'Noto Serif', serif;  /* Times New Roman alternative */
+    font-weight: 700;
+    text-align: left;  /* Align left or center as needed */
+    color: #222;  /* Dark color */
+}
+
+/* Line-Specific Styles */
+.line1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #555; /* Lighter Gray */
+}
+
+.line2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #533692; /* Highlighted color */
+}
+
+.line3 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000; /* Black */
+}
+
+.line4 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #007bff; /* Blue */
+}
+
+
+.am{
+
+  color: #2c3e50;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/*consumption*/
+.mainConsumption{
+
+  transform: translateY(-70px);
+  -webkit-transform: translateY(-70px);
+  padding: 1em 2.5em;
+  background-color: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+/* Section Title Container */
+.hire-section-title  {
+    transform: translateY(-70px);
+    -webkit-transform: translateY(-70px);
+    padding: 1em 2.5em;
+    background-color: #fff;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+
+
+/* Section Header */
+.hire-section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Title Shape */
+.hire-title-shape svg {
+    width: 100%;
+    height: auto;
+    color: #007bff;
+    margin: 3px 0;
+}
+
+/* hires Title */
+.hire-section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* hire Items */
+.hire-item {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hire-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hire-item h3 a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.hire-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* About Section */
+.info-item {
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #f9f9f9;
+}
+
+.hover-text-primary:hover {
+  color: #0d6efd !important; /* Bootstrap primary color */
+}
+
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .about-section-title {
+      text-align: start;
+    }
+  
+    .about-content {
+      text-align: start;
+    }
+  
+   
+  }
+  
+
+/* Skills Section */
+/* Skills Section */
+.skills {
+    padding: 5em 0;
+  }
+
+ 
+  
+  .skills .skill-box {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .skills .skill-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .skills .skill-box p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .skills .progress {
+    height: 8px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .skills .progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+  }
+  
+  .skills .progress-bar[aria-valuenow="97"] {
+    background-color: #28a745; /* Green for Merchandising */
+  }
+  
+  .skills .progress-bar[aria-valuenow="90"] {
+    background-color: #007bff; /* Blue for HTML */
+  }
+  
+  .skills .progress-bar[aria-valuenow="80"] {
+    background-color: #f39c12; /* Yellow for CSS */
+  }
+  
+  .skills .progress-bar[aria-valuenow="65"] {
+    background-color: #e74c3c; /* Red for JavaScript */
+  }
+  
+  .skills .text-end {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .skills .skill-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Resume Section Styling */
+.resume {
+  padding: 1em 2.5em;
+  background-color: #fff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  }
+  
+
+  
+  .resume h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+   
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-left {
+    flex: 1;
+    max-width: 35%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  .timeline-right {
+    flex: 2;
+  }
+  
+  .timeline-left h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .timeline-left .period {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+    left: -6px;
+  }
+  
+  .timeline-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .timeline-right ul {
+    padding-left: 18px;
+  }
+  
+  .timeline-right ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .timeline-right p.description {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-item {
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    .timeline-left {
+      max-width: 100%;
+      text-align: left;
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+
+/* Footer Styling */
+.footer-modern {
+  background: #34495e;
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-overlay {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent);
+  z-index: 0;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #aaa;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.footer {
+    background: #34495e;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer .copyright p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.footer .sitename {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Social Media Icons */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.facebook { background-color: #1877F2; }
+.instagram { background: linear-gradient(45deg, #833AB4, #E1306C, #FD1D1D, #F77737); }
+.linkedin { background-color: #0077B5; }
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #f39c12;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: 0.3s ease-in-out;
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+#scroll-top:hover {
+    background: #e67e22;
+    transform: scale(1.1);
+}
+
+
+.CVPDF {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.CVPDF:hover {
+  background-color: #0056b3;
+}
+
+.img-thumbnail {
+  cursor: pointer;
+}
+
+#additionalInfo, #additionalInfoNew, #additionalInfoNew1, #additionalInfoNew2, #additionalInfoNew3, #additionalInfoNew4, #additionalInfoNew5, 
+#additionalInfoNew6, #additionalInfoNew7, #additionalInfoNew8, #additionalInfoNew9, #additionalInfoNew10, #additionalInfoNew11, #additionalInfoNew12,
+ #additionalInfoNew13, #additionalInfoNew14
+{
+  display: none;
+}
+
+.list-group-item {
+  border: none;
+  font-size: 1rem;
+}
+
+.timeline1 {
+  position: relative;
+  margin-left: 20px;
+}
+.timeline1::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #0d6efd;
+}
+.timeline1-step {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 40px;
+}
+.timeline1-step::before {
+  content: '';
+  position: absolute;
+  top: 0.3rem;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+.section-heading1 {
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.hero-blog-section {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  color: white;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.hero-blog-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero-blog-section p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+.hero-blog-section .section-title {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+.tab-pane img {
+  height: 100px;
+  object-fit: cover;
+}
+
